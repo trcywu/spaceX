@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react'
 import { Provider } from 'react-redux'
 import TechnicalInfoBox from './TechnicalInfoBox'
 
-test('renders the correct name in alt tag', () => {
+test('renders the correct children', () => {
     const mockStore = store()
     render(
         <Provider store={mockStore}>
