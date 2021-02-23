@@ -16,7 +16,7 @@ import React, { FC, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
-const DragonTile: FC = () => {
+const DragonPage: FC = () => {
     const dispatch = useDispatch()
     const dragonList = useSelector((state: RootState) => state.dragons)
     const { id } = useParams<Record<string, string | undefined>>()
@@ -109,4 +109,4 @@ const DragonTile: FC = () => {
     )
 }
 
-export default DragonTile
+export default DragonPage

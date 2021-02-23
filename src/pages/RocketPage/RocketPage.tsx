@@ -16,7 +16,7 @@ import {
     StyledLabel,
 } from 'pages/common/styles'
 
-const RocketTile: FC = () => {
+const RocketPage: FC = () => {
     const dispatch = useDispatch()
     const rocketList = useSelector((state: RootState) => state.rockets)
     const { id } = useParams<Record<string, string | undefined>>()
@@ -112,4 +112,4 @@ const RocketTile: FC = () => {
     )
 }
 
-export default RocketTile
+export default RocketPage
