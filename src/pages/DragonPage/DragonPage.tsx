@@ -17,7 +17,9 @@ const StyledLabel = styled.div`
     text-decoration: underline;
 `
 
-const StyledContent = styled.div``
+const StyledContent = styled.div`
+    font-weight: bold;
+`
 
 const StyledImperial = styled.div`
     font-size: 10px;
@@ -91,15 +93,21 @@ const DragonTile: FC = () => {
                             <StyledImperial>
                                 {dragonById.diameter.feet} ft
                             </StyledImperial>
-                            <StyledContentBox>
-                                <StyledLabel>Launch Mass </StyledLabel>
-                                <StyledContent>
-                                    {dragonById.launch_payload_mass.kg} kg
-                                </StyledContent>
-                                <StyledImperial>
-                                    {dragonById.launch_payload_mass.lb} lb
-                                </StyledImperial>
-                            </StyledContentBox>
+                        </StyledContentBox>
+                        <StyledContentBox>
+                            <StyledLabel>Launch Mass </StyledLabel>
+                            <StyledContent>
+                                {Number(
+                                    dragonById.launch_payload_mass.kg
+                                ).toLocaleString()}{' '}
+                                kg
+                            </StyledContent>
+                            <StyledImperial>
+                                {Number(
+                                    dragonById.launch_payload_mass.lb
+                                ).toLocaleString()}{' '}
+                                lb
+                            </StyledImperial>
                         </StyledContentBox>
                         <StyledContentBox>
                             <StyledLabel>Launch Volume </StyledLabel>

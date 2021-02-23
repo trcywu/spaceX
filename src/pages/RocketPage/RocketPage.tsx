@@ -4,7 +4,7 @@ import AboutSection from 'components/AboutSection/AboutSection'
 import GridCarousel from 'components/GridCarousel/GridCarousel'
 import TechnicalInfoBox from 'components/TechnicalInfoBox/TechnicalInfoBox'
 
-import { Rocket } from 'features/rockets/types'
+import { Rocket } from 'features/rocketsList/types'
 import React, { FC, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
@@ -17,7 +17,9 @@ const StyledLabel = styled.div`
     text-decoration: underline;
 `
 
-const StyledContent = styled.div``
+const StyledContent = styled.div`
+    font-weight: bold;
+`
 
 const StyledImperial = styled.div`
     font-size: 10px;
@@ -86,10 +88,10 @@ const RocketTile: FC = () => {
                         <StyledContentBox>
                             <StyledLabel>Mass </StyledLabel>
                             <StyledContent>
-                                {rocketById.mass.kg} kg
+                                {Number(rocketById.mass.kg).toLocaleString()} kg
                             </StyledContent>
                             <StyledImperial>
-                                {rocketById.mass.lb} lb
+                                {Number(rocketById.mass.lb).toLocaleString()} lb
                             </StyledImperial>
                         </StyledContentBox>
                         <StyledContentBox>
@@ -109,10 +111,12 @@ const RocketTile: FC = () => {
                                             payload to {planet.id}
                                         </StyledLabel>
                                         <StyledContent>
-                                            {planet.kg} kg
+                                            {Number(planet.kg).toLocaleString()}{' '}
+                                            kg
                                         </StyledContent>
                                         <StyledImperial>
-                                            {planet.lb} lb
+                                            {Number(planet.lb).toLocaleString()}{' '}
+                                            lb
                                         </StyledImperial>
                                     </StyledContentBox>
                                 )

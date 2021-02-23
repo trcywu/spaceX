@@ -12,7 +12,7 @@ const StyledPageLayout = styled.div`
     margin: 0px auto;
 `
 
-const StyledMenuBar = styled.div`
+const StyledMenuBar = styled.nav`
     display: flex;
     flex-direction: row;
     align-items: flex-end;

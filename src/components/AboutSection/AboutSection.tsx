@@ -11,8 +11,6 @@ const StyledAboutSection = styled.section`
     border-radius: 10px;
     margin: 50px 0;
     padding: 5px 15px 15px;
-    color: black;
-    font-weight: bold;
 `
 
 const AboutSection: FC<Props> = ({ name, description }) => {

@@ -4,7 +4,7 @@ import store from 'app/store'
 import { Provider } from 'react-redux'
 import { MemoryRouter, Route } from 'react-router-dom'
 import { render, screen } from '@testing-library/react'
-import { Rocket } from 'features/rockets/types'
+import { Rocket } from 'features/rocketsList/types'
 import RocketPage from './RocketPage'
 
 jest.mock('axios')

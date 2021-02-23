@@ -5,8 +5,8 @@ import FilterButton from 'components/FilterButton/FilterButton'
 import { ActiveFilter } from 'features/activeFilter/activeFilterSlice'
 import { getDragonsList } from 'features/dragonsList/dragonSlice'
 import { Dragon } from 'features/dragonsList/types'
-import { getRocketsList } from 'features/rockets/rocketSlice'
-import { Rocket } from 'features/rockets/types'
+import { getRocketsList } from 'features/rocketsList/rocketSlice'
+import { Rocket } from 'features/rocketsList/types'
 import React, { FC, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
@@ -32,9 +32,9 @@ const StyledTilesGrid = styled.div`
     column-gap: 10px;
     row-gap: 20px;
 
-@media (max-width: 768px) {
-    grid-template-columns: 1fr;
-}
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 const DisplayPage: FC = () => {
