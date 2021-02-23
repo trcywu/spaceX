@@ -8,29 +8,13 @@ import { Rocket } from 'features/rocketsList/types'
 import React, { FC, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import styled from 'styled-components'
-
-const StyledLabel = styled.div`
-    color: #e1dfdf;
-    padding-bottom: 5px;
-    text-transform: uppercase;
-    text-decoration: underline;
-`
-
-const StyledContent = styled.div`
-    font-weight: bold;
-`
-
-const StyledImperial = styled.div`
-    font-size: 10px;
-    color: #e1dfdf;
-`
-
-const StyledContentBox = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding-right: 30px;
-`
+import {
+    StyledContent,
+    StyledContentBox,
+    StyledH1,
+    StyledImperial,
+    StyledLabel,
+} from 'pages/common/styles'
 
 const RocketTile: FC = () => {
     const dispatch = useDispatch()
@@ -45,7 +29,7 @@ const RocketTile: FC = () => {
             setRocket(rocketById)
         }
 
-        if (rocketById !== null) {
+        if (!rocketById) {
             const fetchSingleRocket = async () => {
                 try {
                     const res = await axios.get<Rocket>(
@@ -65,7 +49,7 @@ const RocketTile: FC = () => {
         <div>
             {rocketById && (
                 <div>
-                    <h1>{rocketById.name}</h1>
+                    <StyledH1>{rocketById.name}</StyledH1>
                     <GridCarousel
                         images={rocketById.flickr_images}
                         name={rocketById.name}

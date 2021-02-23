@@ -5,39 +5,23 @@ import GridCarousel from 'components/GridCarousel/GridCarousel'
 import TechnicalInfoBox from 'components/TechnicalInfoBox/TechnicalInfoBox'
 
 import { Dragon } from 'features/dragonsList/types'
+import {
+    StyledContent,
+    StyledContentBox,
+    StyledH1,
+    StyledImperial,
+    StyledLabel,
+} from 'pages/common/styles'
 import React, { FC, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import styled from 'styled-components'
-
-const StyledLabel = styled.div`
-    color: #e1dfdf;
-    padding-bottom: 5px;
-    text-transform: uppercase;
-    text-decoration: underline;
-`
-
-const StyledContent = styled.div`
-    font-weight: bold;
-`
-
-const StyledImperial = styled.div`
-    font-size: 10px;
-    color: #e1dfdf;
-`
-
-const StyledContentBox = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding-right: 30px;
-`
 
 const DragonTile: FC = () => {
     const dispatch = useDispatch()
     const dragonList = useSelector((state: RootState) => state.dragons)
     const { id } = useParams<Record<string, string | undefined>>()
 
-    const [dragonById, setDragon] = useState<Dragon | undefined>(undefined)
+    const [dragonById, setDragon] = useState<Dragon | null>(null)
 
     useEffect(() => {
         const dragonById = dragonList.find((dragon) => dragon.id === id)
@@ -65,7 +49,7 @@ const DragonTile: FC = () => {
         <div>
             {dragonById && (
                 <div>
-                    <h1>{dragonById.name}</h1>
+                    <StyledH1>{dragonById.name}</StyledH1>
 
                     <GridCarousel
                         images={dragonById.flickr_images}

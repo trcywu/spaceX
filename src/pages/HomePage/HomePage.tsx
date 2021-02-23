@@ -1,11 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import background from 'assets/spaceBackground.png'
-
-const StyledH1 = styled.h1`
-    font-size: 24px;
-    padding: 10px 0 10px 0;
-`
+import { StyledH1 } from 'pages/common/styles'
 
 const HomePage = () => {
     return (

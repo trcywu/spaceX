@@ -11,17 +11,13 @@ import React, { FC, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
-
-const StyledH1 = styled.h1`
-    font-size: 24px;
-    padding: 10px 0 10px 0;
-`
+import { StyledH1 } from 'pages/common/styles'
 
 const StyledSelectionBar = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 0 20px 0;
+    padding: 0 0 20px 0;
     align-items: center;
 `
 
