@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render tile 1`] = `
+<DocumentFragment>
+  <div
+    aria-labelledby="testName"
+    class="sc-bdfBwQ gtCuCm"
+    data-testid="display-tile"
+  >
+    <img
+      alt="testName"
+      class="sc-gsTCUz fHwxFn"
+      src="www.test.com"
+      width="100%"
+    />
+    <span
+      class="sc-dlfnbm ljbMun"
+    >
+      Name: testName
+    </span>
+    <span
+      class="sc-dlfnbm ljbMun"
+    >
+      Type: testType
+    </span>
+    <div
+      class="sc-hKgILt hJaAuR"
+    >
+      <span
+        class="sc-dlfnbm ljbMun"
+      >
+        Active: yes
+      </span>
+      <span
+        class="sc-dlfnbm ljbMun"
+      >
+        <a
+          href="/testPage/456"
+        >
+          More Info
+        </a>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
